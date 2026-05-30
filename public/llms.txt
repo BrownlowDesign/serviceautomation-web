@@ -1,0 +1,27 @@
+# Field Agent
+
+> Custom-built operations systems for home services businesses. We handle calls, quotes, follow-ups, reviews, and repeat bookings — so owners can focus on doing the work.
+
+## What We Do
+
+Field Agent builds custom automation systems for home services businesses (pressure washing, window cleaning, HVAC, plumbing, and similar trades). We are not a software product — we build and manage a tailored system for each business.
+
+## Services
+
+- [Never Miss a Call](/never-miss-a-call): Missed calls are answered automatically, leads are captured and qualified, and the business owner is notified instantly via text.
+- [Automated Quote Follow-Up](/automated-follow-up): Every quote is followed up at day 3 and day 7. Win-back campaigns re-engage old leads during busy seasons.
+- [Smart Scheduling](/smart-scheduling): Automatic booking, confirmation emails, day-before reminders, morning schedule summaries, and weather-aware rescheduling.
+- [Reputation Management](/reputation): Automatic review requests after every job, review monitoring, response drafting, and before-and-after photo collection.
+- [Repeat Customer Engine](/repeat-customers): Recurring service reminders, cross-service upsells, neighborhood campaigns, referral requests, and dormant customer reactivation.
+- [Business Intelligence](/business-intelligence): Lead source tracking, conversion funnel analytics, revenue attribution by marketing channel, and seasonal forecasting.
+- [Back Office Automation](/back-office): Automatic invoicing, payment reminders, and end-of-day business summaries.
+
+## Who This Is For
+
+Home services business owners with 1-50 employees who are great at the work but overwhelmed by the business operations side — managing calls, following up on quotes, keeping customers coming back, and handling paperwork.
+
+## How It Works
+
+1. We learn your business — services, pricing, customers, how you work.
+2. We build a custom system tailored to your specific operations.
+3. The system runs 24/7 in the background. You focus on the work.

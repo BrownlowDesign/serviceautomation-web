@@ -1,0 +1,187 @@
+/* 
+  Skeleton styles — functional, not pretty.
+  George will replace these with real design.
+  This just makes the site usable for testing.
+*/
+
+@import "tailwindcss";
+
+:root {
+  --max-width: 800px;
+  --font-body: system-ui, -apple-system, sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: var(--font-body);
+  line-height: 1.7;
+  color: #1a1a1a;
+  background: #fff;
+}
+
+/* Layout */
+.site-header nav {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 1.5rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+.site-logo { font-weight: 700; font-size: 1.25rem; text-decoration: none; color: #1a1a1a; }
+.nav-links { display: flex; gap: 1rem; flex-wrap: wrap; font-size: 0.875rem; }
+.nav-links a { text-decoration: none; color: #555; }
+.nav-links a:hover { color: #1a1a1a; }
+.nav-cta {
+  margin-left: auto;
+  padding: 0.5rem 1rem;
+  background: #1a1a1a;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 0.875rem;
+}
+
+main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Hero */
+.hero {
+  padding: 4rem 0 3rem;
+}
+.hero h1 {
+  font-size: 2.5rem;
+  line-height: 1.15;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+}
+.hero-subhead {
+  font-size: 1.2rem;
+  color: #444;
+  margin-bottom: 1rem;
+}
+.hero-cta {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background: #1a1a1a;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+/* Content sections */
+.content-section {
+  padding: 3rem 0;
+  border-top: 1px solid #eee;
+}
+.content-section h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+.content-section p {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+.section-link {
+  font-weight: 600;
+  text-decoration: none;
+  color: #1a1a1a;
+}
+.content-section.highlight {
+  background: #f9f9f9;
+  padding: 3rem 2rem;
+  margin: 2rem -1rem;
+  border-radius: 12px;
+  border: none;
+}
+
+/* FAQ */
+.faq-section {
+  padding: 3rem 0;
+  border-top: 1px solid #eee;
+}
+.faq-section h2 { font-size: 1.5rem; margin-bottom: 1.5rem; }
+.faq-section details {
+  padding: 1rem 0;
+  border-bottom: 1px solid #eee;
+}
+.faq-section summary {
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 1.05rem;
+}
+.faq-section details p {
+  margin-top: 0.75rem;
+  color: #444;
+}
+
+/* Lead form */
+.cta-section {
+  padding: 4rem 0;
+  border-top: 1px solid #eee;
+}
+.lead-form h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.lead-form > p {
+  color: #444;
+  margin-bottom: 1.5rem;
+  font-size: 1.05rem;
+}
+.lead-form-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  max-width: 480px;
+}
+.lead-form-fields input,
+.lead-form-fields select,
+.lead-form-fields textarea {
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+.lead-form-fields button {
+  padding: 0.75rem;
+  background: #1a1a1a;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.lead-form-fields button:disabled { opacity: 0.6; cursor: not-allowed; }
+.lead-form-success h3 { font-size: 1.5rem; margin-bottom: 0.5rem; }
+.lead-form-error { color: #c00; margin-top: 0.5rem; }
+
+/* Footer */
+.site-footer {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 3rem 1rem;
+  border-top: 1px solid #eee;
+  color: #888;
+  font-size: 0.9rem;
+}
+.footer-copy { margin-top: 0.5rem; }
+
+/* Mobile */
+@media (max-width: 640px) {
+  .hero h1 { font-size: 1.75rem; }
+  .nav-links { display: none; }
+}
