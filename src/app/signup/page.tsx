@@ -17,7 +17,7 @@ export default function Signup() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!formData.smsConsent || !formData.termsConsent) return;
+    if (!formData.termsConsent) return;
     setStatus("submitting");
 
     try {
@@ -124,13 +124,12 @@ export default function Signup() {
             </label>
 
             <label className="form-label">
-              Phone number *
+              Phone number
               <input
                 type="tel"
                 placeholder="(510) 555-1234"
                 value={formData.phone}
                 onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                required
               />
             </label>
 
@@ -161,16 +160,15 @@ export default function Signup() {
                   type="checkbox"
                   checked={formData.smsConsent}
                   onChange={(e) => setFormData({ ...formData, smsConsent: e.target.checked })}
-                  required
                 />
                 <span>
-                  By providing my phone number, I agree to receive SMS text messages
-                  from Service Automation regarding my account, system notifications,
-                  lead alerts, and service updates. Message frequency varies
-                  (approximately 1-10 messages per day depending on call volume).
-                  Message and data rates may apply. Reply STOP to opt out at any time.
-                  Reply HELP for help. My phone number will not be shared with third
-                  parties for marketing purposes.
+                  I agree to receive SMS text messages from Service Automation
+                  regarding my account, system notifications, lead alerts, and
+                  service updates. Message frequency varies (approximately 1-10
+                  messages per day depending on call volume). Message and data rates
+                  may apply. Reply STOP to opt out at any time. Reply HELP for help.
+                  Consent to receive text messages is not required to sign up for or
+                  use our services.
                 </span>
               </label>
 
@@ -185,7 +183,7 @@ export default function Signup() {
                   I agree to the{" "}
                   <a href="/terms-and-conditions" target="_blank">Terms of Service</a>{" "}
                   and have read the{" "}
-                  <a href="/privacy" target="_blank">Privacy Policy</a>.
+                  <a href="/privacy" target="_blank">Privacy Policy</a>. *
                 </span>
               </label>
             </div>
