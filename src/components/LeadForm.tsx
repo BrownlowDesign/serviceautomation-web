@@ -4,16 +4,18 @@ import { useState } from "react";
 import { businessTypes, siteConfig } from "@/lib/config";
 
 interface LeadFormProps {
-  sourcePage: string; // Which page the form is on — tracked for analytics
-  compact?: boolean; // Smaller version for nav/sidebar
+  sourcePage: string;
+  compact?: boolean;
 }
 
 export default function LeadForm({ sourcePage, compact = false }: LeadFormProps) {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    phone: "",
     businessType: "",
     headache: "",
+    smsConsent: false,
   });
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
 
@@ -34,7 +36,7 @@ export default function LeadForm({ sourcePage, compact = false }: LeadFormProps)
 
       if (response.ok) {
         setStatus("success");
-        setFormData({ name: "", email: "", businessType: "", headache: "" });
+        setFormData({ name: "", email: "", phone: "", businessType: "", headache: "", smsConsent: false });
       } else {
         setStatus("error");
       }
@@ -82,6 +84,13 @@ export default function LeadForm({ sourcePage, compact = false }: LeadFormProps)
           required
         />
 
+        <input
+          type="tel"
+          placeholder="Phone number"
+          value={formData.phone}
+          onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+        />
+
         <select
           value={formData.businessType}
           onChange={(e) => setFormData({ ...formData, businessType: e.target.value })}
@@ -103,6 +112,24 @@ export default function LeadForm({ sourcePage, compact = false }: LeadFormProps)
             rows={3}
           />
         )}
+
+        <label className="consent-checkbox">
+          <input
+            type="checkbox"
+            checked={formData.smsConsent}
+            onChange={(e) => setFormData({ ...formData, smsConsent: e.target.checked })}
+            required
+          />
+          <span>
+            I agree to receive text messages from Service Automation about our services.
+            Message frequency varies (approximately 1-4 messages per month).
+            Message and data rates may apply.
+            Reply STOP to cancel at any time, or HELP for help.
+            View our{" "}
+            <a href="/privacy" target="_blank">Privacy Policy</a> and{" "}
+            <a href="/terms-and-conditions" target="_blank">Terms of Service</a>.
+          </span>
+        </label>
 
         <button type="submit" disabled={status === "submitting"}>
           {status === "submitting" ? "Sending..." : "I'm interested"}
