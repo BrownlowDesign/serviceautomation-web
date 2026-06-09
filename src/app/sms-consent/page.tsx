@@ -1,21 +1,19 @@
 "use client";
 
 import { useState } from "react";
-import { useSearchParams } from "next/navigation";
-import { Suspense } from "react";
 
-function ConsentForm() {
-  const searchParams = useSearchParams();
-  const businessName = searchParams.get("business") || "your service provider";
+export default function SmsConsent() {
   const [formData, setFormData] = useState({
-    name: searchParams.get("name") || "",
-    phone: searchParams.get("phone") || "",
+    name: "",
+    businessName: "",
+    phone: "",
     smsConsent: false,
   });
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "declined">("idle");
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (!formData.smsConsent) return;
     setStatus("submitting");
 
     try {
@@ -25,9 +23,9 @@ function ConsentForm() {
         body: JSON.stringify({
           name: formData.name,
           phone: formData.phone,
-          smsConsent: formData.smsConsent,
+          businessType: formData.businessName,
+          smsConsent: true,
           sourcePage: "sms-consent",
-          businessName,
           submittedAt: new Date().toISOString(),
         }),
       });
@@ -37,18 +35,14 @@ function ConsentForm() {
     }
   };
 
-  const handleDecline = () => {
-    setStatus("declined");
-  };
-
   if (status === "success") {
     return (
       <main>
         <section className="hero">
-          <h1>You&apos;re all set!</h1>
+          <h1>You&apos;re all set.</h1>
           <p className="hero-subhead">
-            You&apos;ll receive text updates from {businessName} about your
-            appointments and service. You can reply STOP at any time to opt out.
+            You&apos;ll receive text updates about new leads, appointment bookings,
+            and daily summaries. Reply STOP at any time to opt out.
           </p>
         </section>
       </main>
@@ -61,8 +55,8 @@ function ConsentForm() {
         <section className="hero">
           <h1>No problem.</h1>
           <p className="hero-subhead">
-            You won&apos;t receive text messages. {businessName} will contact you
-            via email or phone instead.
+            You won&apos;t receive text messages. All notifications will be sent
+            to your email instead.
           </p>
         </section>
       </main>
@@ -72,10 +66,11 @@ function ConsentForm() {
   return (
     <main>
       <section className="hero">
-        <h1>Stay updated on your appointment</h1>
+        <h1>Turn on text notifications</h1>
         <p className="hero-subhead">
-          {businessName} uses text messages to send you appointment confirmations,
-          reminders, and follow-ups. Enter your details below to opt in.
+          Get instant text alerts when new leads come in, appointments are booked,
+          and daily summaries of your business activity. Never miss a lead because
+          you didn&apos;t check your email.
         </p>
       </section>
 
@@ -94,7 +89,18 @@ function ConsentForm() {
             </label>
 
             <label className="form-label">
-              Phone number
+              Business name
+              <input
+                type="text"
+                placeholder="e.g. Bay Area Pressure Pros"
+                value={formData.businessName}
+                onChange={(e) => setFormData({ ...formData, businessName: e.target.value })}
+                required
+              />
+            </label>
+
+            <label className="form-label">
+              Mobile phone number
               <input
                 type="tel"
                 placeholder="(510) 555-1234"
@@ -112,22 +118,23 @@ function ConsentForm() {
                   onChange={(e) => setFormData({ ...formData, smsConsent: e.target.checked })}
                 />
                 <span>
-                  I agree to receive SMS text messages from {businessName} (powered
-                  by Service Automation) regarding my appointments, service reminders,
-                  and follow-ups. Message frequency varies (approximately 1-5 messages
-                  per service visit). Message and data rates may apply. Reply STOP to
-                  opt out at any time. Reply HELP for help. Consent is not required to
-                  purchase goods or services.
+                  I agree to receive SMS text messages from Service Automation
+                  regarding new leads, appointment bookings, customer activity, and
+                  daily business summaries. Message frequency varies (approximately
+                  1-10 messages per day depending on call volume). Message and data
+                  rates may apply. Reply STOP to opt out at any time. Reply HELP for
+                  help. Consent is not required to use our services. All notifications
+                  are also available via email.
                 </span>
               </label>
             </div>
 
             <button type="submit" disabled={status === "submitting" || !formData.smsConsent}>
-              {status === "submitting" ? "Submitting..." : "Opt in to text updates"}
+              {status === "submitting" ? "Submitting..." : "Turn on text notifications"}
             </button>
 
-            <button type="button" onClick={handleDecline} className="decline-button">
-              No thanks, don&apos;t text me
+            <button type="button" onClick={() => setStatus("declined")} className="decline-button">
+              No thanks, email only
             </button>
           </div>
         </form>
@@ -144,13 +151,5 @@ function ConsentForm() {
         </div>
       </section>
     </main>
-  );
-}
-
-export default function SmsConsent() {
-  return (
-    <Suspense>
-      <ConsentForm />
-    </Suspense>
   );
 }

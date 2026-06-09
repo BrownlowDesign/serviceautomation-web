@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { businessTypes, siteConfig } from "@/lib/config";
+import { businessTypes } from "@/lib/config";
 
 interface LeadFormProps {
   sourcePage: string;
@@ -15,7 +15,6 @@ export default function LeadForm({ sourcePage, compact = false }: LeadFormProps)
     phone: "",
     businessType: "",
     headache: "",
-    smsConsent: false,
   });
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
 
@@ -36,7 +35,7 @@ export default function LeadForm({ sourcePage, compact = false }: LeadFormProps)
 
       if (response.ok) {
         setStatus("success");
-        setFormData({ name: "", email: "", phone: "", businessType: "", headache: "", smsConsent: false });
+        setFormData({ name: "", email: "", phone: "", businessType: "", headache: "" });
       } else {
         setStatus("error");
       }
@@ -86,7 +85,7 @@ export default function LeadForm({ sourcePage, compact = false }: LeadFormProps)
 
         <input
           type="tel"
-          placeholder="Phone number"
+          placeholder="Phone number (optional)"
           value={formData.phone}
           onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
         />
@@ -112,24 +111,6 @@ export default function LeadForm({ sourcePage, compact = false }: LeadFormProps)
             rows={3}
           />
         )}
-
-        <label className="consent-checkbox">
-          <input
-            type="checkbox"
-            checked={formData.smsConsent}
-            onChange={(e) => setFormData({ ...formData, smsConsent: e.target.checked })}
-            required
-          />
-          <span>
-            I agree to receive text messages from Service Automation about our services.
-            Message frequency varies (approximately 1-4 messages per month).
-            Message and data rates may apply.
-            Reply STOP to cancel at any time, or HELP for help.
-            View our{" "}
-            <a href="/privacy" target="_blank">Privacy Policy</a> and{" "}
-            <a href="/terms-and-conditions" target="_blank">Terms of Service</a>.
-          </span>
-        </label>
 
         <button type="submit" disabled={status === "submitting"}>
           {status === "submitting" ? "Sending..." : "I'm interested"}
