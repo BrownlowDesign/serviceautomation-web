@@ -5,17 +5,11 @@ export default function Home() {
     <main>
       {/* HERO */}
       <section className="hero">
-        <h1>Do the work. Count the money. We handle everything else.</h1>
+        <h1>Less chasing leads. More doing the work.</h1>
         <p className="hero-subhead">
-          You didn&apos;t start your business to chase leads, babysit your inbox,
-          and wonder which customers forgot about you. You started it because
-          you&apos;re damn good at what you do.
+        Calls, quotes, bookings, reviews, repeat business — handled automatically, behind the scenes, 24/7. Not software you manage. A system that runs itself.
         </p>
-        <p className="hero-subhead">
-          What if every call got answered, every quote got followed up, every
-          happy customer left a review, and past customers came back like
-          clockwork — without you lifting a finger?
-        </p>
+        
         <a href="#signup" className="hero-cta">Get early access</a>
       </section>
 

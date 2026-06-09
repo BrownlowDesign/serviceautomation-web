@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { siteConfig, navLinks } from "@/lib/config";
 import "./globals.css";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: {
@@ -18,7 +19,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <header className="site-header">
           <nav>
             <a href="/" className="site-logo">
-              {siteConfig.name}
+              <Image src="/service-automation-logo.svg" alt={siteConfig.name} width={200} height={100} />
             </a>
             <div className="nav-links">
               {navLinks.map((link) => (
