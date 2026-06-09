@@ -10,6 +10,7 @@ export default function Signup() {
     phone: "",
     email: "",
     serviceArea: "",
+    smsConsent: false,
     termsConsent: false,
   });
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
@@ -30,6 +31,7 @@ export default function Signup() {
           businessType: formData.businessType,
           headache: `Business: ${formData.businessName}, Area: ${formData.serviceArea}`,
           sourcePage: "signup",
+          smsConsent: formData.smsConsent,
           termsConsent: formData.termsConsent,
           submittedAt: new Date().toISOString(),
         }),
@@ -49,10 +51,10 @@ export default function Signup() {
     return (
       <main>
         <section className="hero">
-          <h1>You&apos;re all set.</h1>
+          <h1>Welcome aboard.</h1>
           <p className="hero-subhead">
-            Thanks for signing up. We&apos;ll be in touch within 24 hours to schedule
-            your onboarding call and get your system set up.
+            We&apos;ll be in touch within 24 hours to schedule your onboarding
+            call and start building your custom system.
           </p>
         </section>
       </main>
@@ -77,8 +79,8 @@ export default function Signup() {
       <section className="hero">
         <h1>Get started with Service Automation</h1>
         <p className="hero-subhead">
-          Fill out the form below to sign up. We&apos;ll reach out to schedule your
-          onboarding call and start building your custom system.
+          Fill out the form below to get started. We&apos;ll reach out to
+          schedule your onboarding call and start building your custom system.
         </p>
       </section>
 
@@ -122,12 +124,13 @@ export default function Signup() {
             </label>
 
             <label className="form-label">
-              Phone number
+              Phone number *
               <input
                 type="tel"
                 placeholder="(510) 555-1234"
                 value={formData.phone}
                 onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                required
               />
             </label>
 
@@ -153,7 +156,25 @@ export default function Signup() {
             </label>
 
             <div className="consent-section">
-<label className="consent-checkbox">
+              <label className="consent-checkbox">
+                <input
+                  type="checkbox"
+                  checked={formData.smsConsent}
+                  onChange={(e) => setFormData({ ...formData, smsConsent: e.target.checked })}
+                />
+                <span>
+                  I agree to receive SMS text messages from Service Automation
+                  at the phone number provided above. Messages include new lead
+                  alerts, appointment notifications, and daily business summaries.
+                  Message frequency varies (approximately 1-10 messages per day
+                  depending on call volume). Message and data rates may apply.
+                  Reply STOP to opt out at any time. Reply HELP for assistance.
+                  Consent to receive text messages is not a condition of
+                  signing up for or using our services.
+                </span>
+              </label>
+
+              <label className="consent-checkbox">
                 <input
                   type="checkbox"
                   checked={formData.termsConsent}
@@ -170,7 +191,7 @@ export default function Signup() {
             </div>
 
             <button type="submit" disabled={status === "submitting"}>
-              {status === "submitting" ? "Submitting..." : "Sign up"}
+              {status === "submitting" ? "Submitting..." : "Get started"}
             </button>
           </div>
 
