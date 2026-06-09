@@ -225,3 +225,25 @@ main {
   padding: 1rem 0;
   border-top: 1px solid #eee;
 }
+
+/* Consent page */
+.decline-button {
+  padding: 0.75rem;
+  background: transparent;
+  color: #666;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+.consent-footer {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #eee;
+  font-size: 0.8rem;
+  color: #666;
+  line-height: 1.4;
+}
+.consent-footer a {
+  color: #333;
+}

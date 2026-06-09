@@ -10,7 +10,6 @@ export default function Signup() {
     phone: "",
     email: "",
     serviceArea: "",
-    smsConsent: false,
     termsConsent: false,
   });
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
@@ -31,7 +30,6 @@ export default function Signup() {
           businessType: formData.businessType,
           headache: `Business: ${formData.businessName}, Area: ${formData.serviceArea}`,
           sourcePage: "signup",
-          smsConsent: formData.smsConsent,
           termsConsent: formData.termsConsent,
           submittedAt: new Date().toISOString(),
         }),
@@ -155,24 +153,7 @@ export default function Signup() {
             </label>
 
             <div className="consent-section">
-              <label className="consent-checkbox">
-                <input
-                  type="checkbox"
-                  checked={formData.smsConsent}
-                  onChange={(e) => setFormData({ ...formData, smsConsent: e.target.checked })}
-                />
-                <span>
-                  I agree to receive SMS text messages from Service Automation
-                  regarding my account, system notifications, lead alerts, and
-                  service updates. Message frequency varies (approximately 1-10
-                  messages per day depending on call volume). Message and data rates
-                  may apply. Reply STOP to opt out at any time. Reply HELP for help.
-                  Consent to receive text messages is not required to sign up for or
-                  use our services.
-                </span>
-              </label>
-
-              <label className="consent-checkbox">
+<label className="consent-checkbox">
                 <input
                   type="checkbox"
                   checked={formData.termsConsent}
