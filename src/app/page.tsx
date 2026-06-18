@@ -5,13 +5,34 @@ export default function Home() {
     <main>
       {/* HERO */}
       <section className="hero">
+        <span className="eyebrow">Design partners — limited spots</span>
         <h1>Less chasing leads. More doing the work.</h1>
         <p className="hero-subhead">
-        Calls, quotes, bookings, reviews, repeat business — handled automatically, behind the scenes, 24/7. Not software you manage. A system that runs itself.
+          We handle everything between the first call and the repeat booking — automatically, while you&apos;re on the job.
         </p>
-        
         <a href="#signup" className="hero-cta">Get early access</a>
+        <p className="hero-note">No cost · No commitment</p>
       </section>
+
+      {/* STATS STRIP */}
+      <div className="stats-strip">
+        <div className="stat">
+          <span className="stat-number">100%</span>
+          <span className="stat-label">Calls answered</span>
+        </div>
+        <div className="stat">
+          <span className="stat-number">3×</span>
+          <span className="stat-label">More quote follow-ups</span>
+        </div>
+        <div className="stat">
+          <span className="stat-number">24/7</span>
+          <span className="stat-label">Runs in the background</span>
+        </div>
+        <div className="stat">
+          <span className="stat-number">$0</span>
+          <span className="stat-label">To start</span>
+        </div>
+      </div>
 
       {/* WHAT WE DO */}
       <section className="content-section">
