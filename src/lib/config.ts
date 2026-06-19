@@ -18,6 +18,7 @@ export const navLinks = [
   { href: "/reputation", label: "Reputation" },
   { href: "/repeat-customers", label: "Repeat Customers" },
   { href: "/business-intelligence", label: "Know Your Numbers" },
+  { href: "/pricing", label: "Pricing" },
 ];
 
 // Form fields for lead capture
