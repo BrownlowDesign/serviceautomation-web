@@ -2,14 +2,19 @@
 
 /* ─── Design tokens ─────────────────────────────────────────── */
 :root {
-  --bg:     #F5F2EC;
-  --ink:    #1A1A18;
-  --muted:  #6B6459;
-  --faint:  #9A9080;
-  --rule:   #E8E4DC;
-  --font:   var(--font-inter, 'Inter'), system-ui, -apple-system, sans-serif;
-  --gutter: clamp(24px, 5.5vw, 80px);
-  --max:    1440px;
+  --bg:         #F5F2EC;
+  --ink:        #1A1A18;
+  --ink-hover:  #2C2C28;
+  --muted:      #6B6459;
+  --faint:      #9A9080;
+  --body:       #4A4540;
+  --rule:       #E8E4DC;
+  --rule-mid:   #C8C0B0;
+  --surface:    #FDFAF6;
+  --error:      #b91c1c;
+  --font:       var(--font-inter, 'Inter'), system-ui, -apple-system, sans-serif;
+  --gutter:     clamp(24px, 5.5vw, 80px);
+  --max:        1440px;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -80,7 +85,7 @@ body {
   flex-shrink: 0;
 }
 
-.nav-cta:hover { background: #2C2C28; }
+.nav-cta:hover { background: var(--ink-hover); }
 
 /* ─── Main wrapper ──────────────────────────────────────────── */
 main {
@@ -100,7 +105,7 @@ main {
 .eyebrow {
   display: inline-flex;
   align-items: center;
-  border: 1px solid #C8C0B0;
+  border: 1px solid var(--rule-mid);
   padding: 5px 14px;
   border-radius: 20px;
   font-size: 11px;
@@ -138,7 +143,7 @@ main {
   margin-top: 4px;
 }
 
-.hero-cta:hover { background: #2C2C28; }
+.hero-cta:hover { background: var(--ink-hover); }
 
 .hero-note {
   font-size: 14px;
@@ -199,7 +204,7 @@ main {
 .content-section p {
   font-size: 17px;
   line-height: 1.75;
-  color: #4A4540;
+  color: var(--body);
   margin-bottom: 16px;
   max-width: 580px;
 }
@@ -316,7 +321,7 @@ main {
   border-radius: 7px;
   font-size: 15px;
   font-family: inherit;
-  background: #FDFAF6;
+  background: var(--surface);
   color: var(--ink);
   outline: none;
   transition: border-color 0.15s;
@@ -346,7 +351,7 @@ main {
   margin-top: 4px;
 }
 
-.lead-form-fields button:hover { background: #2C2C28; }
+.lead-form-fields button:hover { background: var(--ink-hover); }
 .lead-form-fields button:disabled { opacity: 0.6; cursor: not-allowed; }
 
 .lead-form-success h3 {
@@ -362,7 +367,7 @@ main {
 }
 
 .lead-form-error {
-  color: #b91c1c;
+  color: var(--error);
   margin-top: 8px;
   font-size: 14px;
 }
@@ -473,7 +478,7 @@ main {
 
 .about-text p {
   font-size: 17px;
-  color: #4A4540;
+  color: var(--body);
   margin-bottom: 1.25rem;
   line-height: 1.8;
   max-width: 580px;

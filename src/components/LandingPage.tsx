@@ -1,15 +1,13 @@
 import LeadForm from "./LeadForm";
+import { Hero, Section, FAQ } from "./ui";
 
 interface LandingSection {
   heading: string;
-  body: string; // Can include multiple paragraphs separated by \n\n
+  body: string; // supports multiple paragraphs separated by \n\n
 }
 
 interface LandingPageProps {
-  hero: {
-    headline: string;
-    subhead: string;
-  };
+  hero: { headline: string; subhead: string };
   sections: LandingSection[];
   faqs?: { question: string; answer: string }[];
   sourcePage: string;
@@ -18,37 +16,23 @@ interface LandingPageProps {
 export default function LandingPage({ hero, sections, faqs, sourcePage }: LandingPageProps) {
   return (
     <main>
-      <section className="hero">
-        <h1>{hero.headline}</h1>
-        <p className="hero-subhead">{hero.subhead}</p>
-        <a href="#signup" className="hero-cta">
-          Get early access
-        </a>
-      </section>
+      <Hero
+        headline={hero.headline}
+        subhead={hero.subhead}
+        cta={{ href: "#signup", label: "Get early access" }}
+      />
 
       {sections.map((section, i) => (
-        <section key={i} className="content-section">
+        <Section key={i}>
           <h2>{section.heading}</h2>
-          {section.body.split("\n\n").map((paragraph, j) => (
-            <p key={j}>{paragraph}</p>
-          ))}
-        </section>
+          {section.body.split("\n\n").map((p, j) => <p key={j}>{p}</p>)}
+        </Section>
       ))}
 
-      {faqs && faqs.length > 0 && (
-        <section className="faq-section">
-          <h2>Common questions</h2>
-          {faqs.map((faq, i) => (
-            <details key={i}>
-              <summary>{faq.question}</summary>
-              <p>{faq.answer}</p>
-            </details>
-          ))}
-        </section>
-      )}
+      {faqs && faqs.length > 0 && <FAQ items={faqs} />}
 
       <section className="cta-section">
-        <LeadForm sourcePage={sourcePage} />
+        <LeadForm sourcePage={sourcePage} compact />
       </section>
     </main>
   );
