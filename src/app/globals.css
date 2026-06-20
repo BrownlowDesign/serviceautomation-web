@@ -68,6 +68,63 @@ body {
 
 .nav-links a:hover { color: var(--ink); }
 
+.nav-dropdown {
+  position: relative;
+}
+
+.nav-dropdown-trigger {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--muted);
+  font-family: inherit;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.nav-dropdown-trigger:hover { color: var(--ink); }
+
+.nav-dropdown-chevron {
+  font-size: 11px;
+  line-height: 1;
+}
+
+.nav-dropdown-panel {
+  display: none;
+  position: absolute;
+  top: calc(100% + 14px);
+  left: -16px;
+  background: #FDFAF6;
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  padding: 6px 0;
+  min-width: 240px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  z-index: 100;
+  flex-direction: column;
+}
+
+.nav-dropdown:hover .nav-dropdown-panel {
+  display: flex;
+}
+
+.nav-dropdown-panel a {
+  padding: 10px 20px;
+  font-size: 14px;
+  color: var(--muted);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.nav-dropdown-panel a:hover {
+  color: var(--ink);
+  background: var(--bg);
+}
+
 .nav-cta {
   margin-left: auto;
   background: var(--ink);
