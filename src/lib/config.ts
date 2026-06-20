@@ -11,16 +11,6 @@ export const siteConfig = {
   footer: "Built for people who are great at the work — and tired of everything else.",
 };
 
-export const navLinks = [
-  { href: "/never-miss-a-call", label: "Never Miss a Call" },
-  { href: "/automated-follow-up", label: "Close More Quotes" },
-  { href: "/smart-scheduling", label: "Smart Scheduling" },
-  { href: "/reputation", label: "Reputation" },
-  { href: "/repeat-customers", label: "Repeat Customers" },
-  { href: "/business-intelligence", label: "Know Your Numbers" },
-  { href: "/pricing", label: "Pricing" },
-];
-
 // Form fields for lead capture
 export const businessTypes = [
   "Pressure Washing",

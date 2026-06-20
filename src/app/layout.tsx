@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import { siteConfig, navLinks } from "@/lib/config";
+import { siteConfig } from "@/lib/config";
 import "./globals.css";
 import Image from "next/image";
 
@@ -29,11 +29,21 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <Image src="/service-automation-logo.svg" alt={siteConfig.name} width={200} height={100} />
             </a>
             <div className="nav-links">
-              {navLinks.map((link) => (
-                <a key={link.href} href={link.href}>
-                  {link.label}
-                </a>
-              ))}
+              <div className="nav-dropdown">
+                <button className="nav-dropdown-trigger">
+                  Products <span className="nav-dropdown-chevron">▾</span>
+                </button>
+                <div className="nav-dropdown-panel">
+                  <a href="/never-miss-a-call">Automated Call Answering</a>
+                  <a href="/smart-scheduling">Customer Tracking</a>
+                  <a href="/business-intelligence">Business Intelligence</a>
+                  <a href="/automated-follow-up">Customer Relationship Builder</a>
+                  <a href="/website-optimization">Website Optimization</a>
+                </div>
+              </div>
+              <a href="/about">About Us</a>
+              <a href="/pricing">Pricing</a>
+              <a href="/value">The Value</a>
             </div>
             <a href="#signup" className="nav-cta">
               Get early access
