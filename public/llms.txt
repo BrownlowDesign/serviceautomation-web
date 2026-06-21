@@ -1,20 +1,53 @@
-# Field Agent
+# Service Automation
 
-> Custom-built operations systems for home services businesses. We handle calls, quotes, follow-ups, reviews, and repeat bookings — so owners can focus on doing the work.
+> Custom operations systems for home services businesses. We handle calls, quotes, follow-ups, reviews, reminders, websites, and campaigns — so owners can focus on doing the work.
 
-## What We Do
+## About
+- Founded by Ryan, a small business owner in the East Bay, CA
+- 25 years of experience building tools that make work easier
+- Not a tech company — a one-person business helping other small business owners succeed
 
-Field Agent builds custom automation systems for home services businesses (pressure washing, window cleaning, HVAC, plumbing, and similar trades). We are not a software product — we build and manage a tailored system for each business.
+## Problems We Solve
+- [Stop Missing Customer Calls](/stop-missing-customer-calls): Catch every call 24/7 without hiring an office manager
+- [How to Follow Up on Quotes](/how-to-follow-up-on-quotes): Automated follow-ups at day 3 and 7 close more jobs
+- [Get More Google Reviews](/get-more-google-reviews): Automatically ask every customer after every job
+- [Keep Customers Coming Back](/keep-customers-coming-back): Recurring reminders and seasonal campaigns
+- [How to Compete With Cheaper Contractors](/how-to-compete-with-cheaper-contractors): Win on quality and professionalism, not price
+- [Automate Appointment Reminders](/automate-appointment-reminders): Reduce no-shows with automatic confirmations and reminders
+- [How to Grow a Home Services Business](/how-to-grow-a-home-services-business): The complete playbook
 
-## Services
+## Industries We Serve
+- [Pressure Washing](/pressure-washing-business-automation)
+- [Window Cleaning](/window-cleaning-business-automation)
+- [HVAC](/hvac-business-automation)
+- [Plumbing](/plumbing-business-automation)
+- [Landscaping](/landscaping-business-automation)
+- [Roofing](/roofing-business-automation)
+- [Cleaning / Janitorial](/cleaning-business-automation)
 
-- [Never Miss a Call](/never-miss-a-call): Missed calls are answered automatically, leads are captured and qualified, and the business owner is notified instantly via text.
-- [Automated Quote Follow-Up](/automated-follow-up): Every quote is followed up at day 3 and day 7. Win-back campaigns re-engage old leads during busy seasons.
-- [Smart Scheduling](/smart-scheduling): Automatic booking, confirmation emails, day-before reminders, morning schedule summaries, and weather-aware rescheduling.
-- [Reputation Management](/reputation): Automatic review requests after every job, review monitoring, response drafting, and before-and-after photo collection.
-- [Repeat Customer Engine](/repeat-customers): Recurring service reminders, cross-service upsells, neighborhood campaigns, referral requests, and dormant customer reactivation.
-- [Business Intelligence](/business-intelligence): Lead source tracking, conversion funnel analytics, revenue attribution by marketing channel, and seasonal forecasting.
-- [Back Office Automation](/back-office): Automatic invoicing, payment reminders, and end-of-day business summaries.
+## Our Services
+- [Never Miss a Call](/never-miss-a-call): AI-powered call answering that sounds like your office
+- [Automated Follow-Up](/automated-follow-up): Quote follow-ups, review requests, recurring reminders
+- [Smart Scheduling](/smart-scheduling): Appointment booking, confirmations, and reminders
+- [Reputation Management](/reputation): Google review automation and monitoring
+- [Repeat Customers](/repeat-customers): Recurring reminders and seasonal campaigns
+- [Business Intelligence](/business-intelligence): Daily summaries, lead tracking, conversion analytics
+- [Back Office](/back-office): Invoicing, payment follow-up, and admin automation
+
+## Solutions Compared
+- [Answering Service for Contractors](/answering-service-for-contractors): Why custom beats generic
+- [Better Than Hiring an Office Manager](/better-than-hiring-an-office-manager): More capability, less cost
+
+## Contact
+- Website: https://serviceautomation.pro
+- Email: hello@serviceautomation.pro
+- Phone: 510-282-8598
+- Location: East Bay, California
+
+## Legal
+- [Privacy Policy](/privacy)
+- [Terms of Service](/terms-and-conditions)
+
 
 ## Who This Is For
 
