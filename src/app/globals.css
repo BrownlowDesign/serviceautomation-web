@@ -852,6 +852,94 @@ main {
   .about-callout p { font-size: 1.35rem; }
 }
 
+/* ─── Value page ────────────────────────────────────────────── */
+.value-math {
+  background: var(--ink);
+  padding: 80px var(--gutter);
+}
+
+.value-math-inner {
+  max-width: 720px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.value-math-label {
+  font-size: 20px;
+  font-weight: 600;
+  color: #C9A96E;
+  line-height: 1.4;
+}
+
+.value-lost-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.value-lost-list li {
+  font-size: 17px;
+  color: var(--bg);
+  line-height: 1.6;
+  padding-left: 1.2em;
+  position: relative;
+}
+
+.value-lost-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--bg);
+}
+
+.value-plus-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border-top: 1px solid #2C2C28;
+}
+
+.value-plus-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 16px 0;
+  border-bottom: 1px solid #2C2C28;
+}
+
+.value-plus-sign {
+  font-size: 28px;
+  font-weight: 300;
+  color: #C9A96E;
+  line-height: 1;
+  flex-shrink: 0;
+  width: 28px;
+}
+
+.value-plus-item span:last-child {
+  font-size: 17px;
+  color: var(--bg);
+  line-height: 1.5;
+}
+
+.value-taglines {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+
+.value-taglines span {
+  font-size: 13px;
+  color: #6B6459;
+  letter-spacing: 0.01em;
+}
+
+@media (max-width: 640px) {
+  .value-taglines { flex-direction: column; gap: 8px; align-items: flex-start; }
+}
+
 /* SEO Pages */
 .services-list {
   display: grid;
