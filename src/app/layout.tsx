@@ -34,11 +34,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   Products <span className="nav-dropdown-chevron">▾</span>
                 </button>
                 <div className="nav-dropdown-panel">
-                  <a href="/never-miss-a-call">Automated Call Answering</a>
-                  <a href="/smart-scheduling">Customer Tracking</a>
-                  <a href="/business-intelligence">Business Intelligence</a>
-                  <a href="/automated-follow-up">Customer Relationship Builder</a>
-                  <a href="/website-optimization">Website Optimization</a>
+                  <div className="nav-dropdown-panel-inner">
+                    <a href="/never-miss-a-call">Automated Call Answering</a>
+                    <a href="/smart-scheduling">Customer Tracking</a>
+                    <a href="/business-intelligence">Business Intelligence</a>
+                    <a href="/automated-follow-up">Customer Relationship Builder</a>
+                    <a href="/website-optimization">Website Optimization</a>
+                  </div>
                 </div>
               </div>
               <a href="/about">About Us</a>
