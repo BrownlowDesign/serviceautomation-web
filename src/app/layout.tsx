@@ -26,7 +26,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <header className="site-header">
           <nav>
             <a href="/" className="site-logo">
-              <Image src="/service-automation-logo.svg" alt={siteConfig.name} width={200} height={100} />
+              <Image src="/service-automation-logo.svg" alt={siteConfig.name} width={400} height={200} />
             </a>
             <div className="nav-links">
               <div className="nav-dropdown">
