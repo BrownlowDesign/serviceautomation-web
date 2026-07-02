@@ -5,8 +5,7 @@ export default function Home() {
     <main>
       {/* HERO */}
       <section className="hero">
-        <span className="eyebrow">Design partners — limited spots</span>
-        <h1>Less chasing leads. More doing the work.</h1>
+        <h1>Every lead captured.<br />Every customer satisfied.</h1>
         <p className="hero-subhead">
           We handle everything between the first call and the repeat booking — automatically, while you&apos;re on the job.
         </p>
@@ -14,142 +13,159 @@ export default function Home() {
         <p className="hero-note">No cost · No commitment</p>
       </section>
 
-      {/* STATS STRIP */}
-      <div className="stats-strip">
-        <div className="stat">
-          <span className="stat-number">100%</span>
-          <span className="stat-label">Calls answered</span>
+      {/* PAIN STRIP */}
+      <div className="pain-strip">
+        <div className="pain-item">
+          <span className="pain-icon">📞</span>
+          <p>Phone rings while you&apos;re on a job. Customer calls someone else.</p>
         </div>
-        <div className="stat">
-          <span className="stat-number">3×</span>
-          <span className="stat-label">More quote follow-ups</span>
+        <div className="pain-item">
+          <span className="pain-icon">📋</span>
+          <p>Quotes sent but never followed up. Money left on the table.</p>
         </div>
-        <div className="stat">
-          <span className="stat-number">24/7</span>
-          <span className="stat-label">Runs in the background</span>
-        </div>
-        <div className="stat">
-          <span className="stat-number">$0</span>
-          <span className="stat-label">To start</span>
+        <div className="pain-item">
+          <span className="pain-icon">👋</span>
+          <p>Customers who used you once and disappeared. No reason — just forgot.</p>
         </div>
       </div>
 
-      {/* WHAT WE DO */}
-      <section className="content-section">
-        <h2>We run your customer operations so you can run your crew.</h2>
-        <p>
-          We set up custom systems that handle everything between the first
-          phone call and the repeat booking — automatically, behind the scenes, 24/7.
-        </p>
+      {/* WHAT WE DO — SPLIT PANEL */}
+      <section className="split-panel">
+        <div className="split-panel-left">
+          <span className="eyebrow">What we do</span>
+          <h2>Your business keeps running — even when you&apos;re on a job.</h2>
+          <p>
+            Calls get answered. Quotes get followed up. Customers get rebooked.
+            We wire it all together for your specific business in 1–2 weeks,
+            then it runs in the background while you work.
+          </p>
+        </div>
+        <div className="split-panel-right">
+          <span className="eyebrow split-panel-eyebrow">Not another app to manage</span>
+          <h2>This isn&apos;t another app with a login and a dashboard.</h2>
+          <p>
+            No buttons to push. No tabs to check. No training videos. It works
+            like a great office manager — things just get done and you hear
+            about it at the end of the day.
+          </p>
+        </div>
       </section>
 
-      {/* NEVER MISS */}
-      <section className="content-section">
-        <h2>Every call answered. Every lead captured.</h2>
-        <p>
-          Right now, when you&apos;re up on a ladder or running a pressure washer,
-          the phone rings and goes to voicemail. That customer calls someone else.
-          Job gone.
-        </p>
-        <p>
-          We fix that. When you can&apos;t pick up, our system answers the call,
-          finds out what they need, gives them a price range, and books the
-          estimate — then texts you the details instantly. By the time you check
-          your phone, the lead is already on your schedule.
-        </p>
-        <a href="/never-miss-a-call" className="section-link">Learn more →</a>
+      {/* PRIMARY FEATURES — CARDS */}
+      <section className="features-primary">
+        <div className="features-primary-header">
+          <span className="eyebrow">How we help</span>
+          <h2>The three things that cost you the most money — fixed.</h2>
+        </div>
+        <div className="features-grid">
+          <div className="feature-card">
+            <h3>Every call answered</h3>
+            <p>
+              When you can&apos;t pick up, our system answers, finds out what they
+              need, gives a price range, and books the estimate. By the time you
+              check your phone, the lead is on your schedule.
+            </p>
+            <a href="/never-miss-a-call" className="section-link">Learn more →</a>
+          </div>
+          <div className="feature-card">
+            <h3>Every quote followed up</h3>
+            <p>
+              We send the quote in a clean format, then follow up at day three
+              and day seven. Most competitors never follow up once. You&apos;ll
+              follow up every time without thinking about it.
+            </p>
+            <a href="/automated-follow-up" className="section-link">Learn more →</a>
+          </div>
+          <div className="feature-card">
+            <h3>Customers that keep coming back</h3>
+            <p>
+              Twelve months later, your customer gets a text about the spring
+              schedule. Seasonal campaigns, referral requests, dormant
+              reactivation — all running in the background.
+            </p>
+            <a href="/repeat-customers" className="section-link">Learn more →</a>
+          </div>
+        </div>
       </section>
 
-      {/* FOLLOW UP */}
-      <section className="content-section">
-        <h2>Every quote followed up. Automatically.</h2>
-        <p>
-          You drive out, look at the job, give a fair price. Then you get busy
-          and forget to follow up. We send the quote in a clean format, then
-          follow up at day three and day seven. Most of your competitors never
-          follow up once. You&apos;ll follow up every time without thinking about it.
-        </p>
-        <a href="/automated-follow-up" className="section-link">Learn more →</a>
+      {/* MID-PAGE CTA */}
+      <section className="mid-cta">
+        <h2>Ready to stop losing jobs?</h2>
+        <p>Get set up in 1–2 weeks. No contracts, no risk.</p>
+        <a href="#signup" className="hero-cta">Get early access</a>
       </section>
 
-      {/* SCHEDULING */}
-      <section className="content-section">
-        <h2>Booked, confirmed, and reminded — no phone tag.</h2>
-        <p>
-          When a job gets booked, your customer gets a professional confirmation
-          immediately. The day before, they get a reminder. You get a morning
-          summary with addresses and details. Rain in the forecast? We&apos;ll
-          flag it, reschedule the job, and let the customer know.
-        </p>
-        <a href="/smart-scheduling" className="section-link">Learn more →</a>
+      {/* HOW IT WORKS */}
+      <section className="how-it-works">
+        <span className="eyebrow">How it works</span>
+        <h2>Three steps. Then it runs itself.</h2>
+        <div className="steps-grid">
+          <div className="step">
+            <span className="step-number">1</span>
+            <h3>We learn your business</h3>
+            <p>A 30-minute call. We learn how you quote, schedule, and follow up — so the system works the way you already work.</p>
+          </div>
+          <div className="step">
+            <span className="step-number">2</span>
+            <h3>We build it</h3>
+            <p>In 1–2 weeks, your system is live — handling calls, sending follow-ups, managing reviews, and booking repeats.</p>
+          </div>
+          <div className="step">
+            <span className="step-number">3</span>
+            <h3>It runs itself</h3>
+            <p>You do the work. The system handles everything else. You get a daily summary of what happened while you were busy.</p>
+          </div>
+        </div>
       </section>
 
-      {/* REPUTATION */}
-      <section className="content-section">
-        <h2>Turn every job into more business.</h2>
-        <p>
-          After every completed job, your customer gets a thank-you text and an
-          easy link to leave a Google review. When a new review comes in, we
-          draft a response so your profile stays active and professional. More
-          reviews, better ratings, more calls from Google.
-        </p>
-        <a href="/reputation" className="section-link">Learn more →</a>
+      {/* SECONDARY FEATURES — COMPACT GRID */}
+      <section className="features-secondary">
+        <span className="eyebrow">Everything else, handled</span>
+        <div className="features-compact-grid">
+          <div className="feature-compact">
+            <h3>Smart scheduling</h3>
+            <p>Confirmations, reminders, weather rescheduling — no phone tag.</p>
+            <a href="/smart-scheduling" className="section-link">Learn more →</a>
+          </div>
+          <div className="feature-compact">
+            <h3>Reputation &amp; reviews</h3>
+            <p>Automatic review requests after every job. Responses drafted for you.</p>
+            <a href="/reputation" className="section-link">Learn more →</a>
+          </div>
+          <div className="feature-compact">
+            <h3>Business intelligence</h3>
+            <p>Daily summary: calls, quotes, jobs, revenue. On your phone every evening.</p>
+            <a href="/business-intelligence" className="section-link">Learn more →</a>
+          </div>
+          <div className="feature-compact">
+            <h3>Back office</h3>
+            <p>Invoices go out automatically. Late payments get polite reminders. No chasing.</p>
+            <a href="/back-office" className="section-link">Learn more →</a>
+          </div>
+        </div>
       </section>
 
-      {/* REPEAT CUSTOMERS */}
-      <section className="content-section">
-        <h2>Customers that keep coming back.</h2>
-        <p>
-          Twelve months after a window cleaning, your customer gets a text asking
-          if they want to get on the spring schedule. Had their driveway done but
-          never got their windows cleaned? We reach out with an easy upsell.
-          Doing a job on their street? We text nearby past customers. Seasonal
-          campaigns, referral requests, dormant customer reactivation — all
-          running in the background.
-        </p>
-        <a href="/repeat-customers" className="section-link">Learn more →</a>
+      {/* SOCIAL PROOF */}
+      <section className="proof-section">
+        <h2>Built for businesses like yours</h2>
+        <div className="proof-grid">
+          <div className="proof-stat">
+            <span className="proof-number">100%</span>
+            <span className="proof-label">of calls answered — even nights and weekends</span>
+          </div>
+          <div className="proof-stat">
+            <span className="proof-number">3×</span>
+            <span className="proof-label">more quotes converted with automatic follow-up</span>
+          </div>
+          <div className="proof-stat">
+            <span className="proof-number">1–2 weeks</span>
+            <span className="proof-label">from first call to fully running system</span>
+          </div>
+        </div>
       </section>
 
-      {/* BUSINESS INTELLIGENCE */}
-      <section className="content-section">
-        <h2>See your business like never before.</h2>
-        <p>
-          How many calls came in this month and where they came from. How many
-          turned into quotes. How many quotes turned into jobs. How much revenue
-          each source brought in. Your end-of-day summary tells you: jobs
-          completed, revenue earned, new leads captured, reviews received. This
-          is the kind of data big companies have entire teams for. You get it on
-          your phone every evening.
-        </p>
-        <a href="/business-intelligence" className="section-link">Learn more →</a>
-      </section>
-
-      {/* BACK OFFICE */}
-      <section className="content-section">
-        <h2>The back office stuff — handled.</h2>
-        <p>
-          Job&apos;s done? The invoice goes out automatically. Payment hasn&apos;t
-          come in after a week? A polite reminder gets sent. No chasing. No
-          awkward conversations. The busywork that eats your evenings and
-          weekends? It&apos;s not your problem anymore.
-        </p>
-        <a href="/back-office" className="section-link">Learn more →</a>
-      </section>
-
-      {/* BOTTOM LINE */}
-      <section className="content-section highlight">
-        <h2>You focus on doing great work. The rest just happens.</h2>
-        <p>
-          Every missed call, forgotten follow-up, and lost repeat customer is
-          money walking out the door. We close those gaps — all of them — with a
-          system built specifically for your business. Not an app you&apos;ll
-          never log into. Not software with a hundred buttons. A system that runs
-          quietly in the background and puts money in your pocket.
-        </p>
-      </section>
-
-      {/* CTA */}
-      <section className="cta-section">
+      {/* FINAL CTA */}
+      <section className="cta-section" id="signup">
         <LeadForm sourcePage="homepage" />
       </section>
     </main>
