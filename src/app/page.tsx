@@ -36,8 +36,8 @@ export default function Home() {
           <h2>Your business keeps running — even when you&apos;re on a job.</h2>
           <p>
             Calls get answered. Quotes get followed up. Customers get rebooked.
-            We wire it all together for your specific business in 1–2 weeks,
-            then it runs in the background while you work.
+            All customized for your business.
+            then it runs 24/7 while you work.
           </p>
         </div>
         <div className="split-panel-right">
